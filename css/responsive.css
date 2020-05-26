@@ -25,7 +25,7 @@
         display: block;
     }
 }
-@media (min-width: 1200px) {
+@media only screen (min-width: 1200px) {
     .container {
         max-width: calc(90% - 10px) !important;
     }
@@ -37,15 +37,34 @@
     }
 }
 /*------------max*/
-@media only screen and (max-width: 576px) {
-   .main--logo{
-    font-size: 3rem;
-   }
-   .notification--container{
-    width: 70vw;
-   }
+@media only screen and (max-width: 992px){
+    .navbar-toggler{
+        padding: .1rem;
+        /*border-radius: .15rem;*/
+        /*border: .05rem solid black;*/
+        /*overflow: hidden;*/
+        transition: all .3s ease;
+    }
+    .icon--bar{
+        background-color: dodgerblue;
+    }
+    .navbar-collapse {
+        position: absolute;
+        min-width: 18rem;
+        top: 85px;
+        right: 0;
+        height: 100vh;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        
+        background-color: white;
+        border-radius: .2rem;
+        box-shadow: 0 0 1rem .1rem #888;
+        /*transform: translateX(100%);
+        transition: all .3s linear;*/
+        display: none;
+    }
 }
-
 @media only screen and (max-width: 768px) {
     .hero {
         width: 100%;
@@ -86,30 +105,15 @@
         font-size: .9rem;
     }
 }
-
-@media only screen and (max-width: 992px){
-    .navbar-toggler{
-        padding: .1rem;
-        /*border-radius: .15rem;*/
-        /*border: .05rem solid black;*/
-        /*overflow: hidden;*/
-        transition: all .3s ease;
-    }
-    .navbar-collapse {
-        position: absolute;
-        min-width: 18rem;
-        top: 85px;
-        right: 0;
-        height: 100vh;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        
-        background-color: white;
-        border-radius: .2rem;
-        box-shadow: 0 0 1rem .1rem #888;
-        /*transform: translateX(100%);
-        transition: all .3s linear;*/
-        display: none;
-    }
+@media only screen and (max-width: 576px) {
+   .main--logo{
+    font-size: 3rem;
+   }
+   .navbar-collapse {
+    top: 58px;
+   }
+   .notification--container{
+    width: 70vw;
+   }
 }
 /*#343a40!important*/
