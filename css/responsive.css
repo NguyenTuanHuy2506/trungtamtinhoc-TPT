@@ -1,0 +1,115 @@
+@media only screen and (min-width: 576px) {
+    .container {
+        max-width: calc(90% - 10px) !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: calc(90% - 10px) !important;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: calc(90% - 10px) !important;
+    }
+
+    .top-menu__sub {
+        min-width: 15rem;
+        position: absolute;
+        //background-color: gray;
+    }
+
+    .nav-item:hover .top-menu__sub {
+        display: block;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: calc(90% - 10px) !important;
+    }
+    .nav--fixed {
+        top: 1.4rem;
+    }
+    .navbar-nav>.nav-item {
+        margin: 0 .3rem;
+    }
+}
+/*------------max*/
+@media only screen and (max-width: 576px) {
+   .main--logo{
+    font-size: 3rem;
+   }
+   .notification--container{
+    width: 70vw;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero .hero--container {
+
+        flex-direction: column-reverse;
+    }
+
+    .hero .hero--container--left,
+    .hero .hero--container--right {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .sli-item {
+        display: flex;
+    }
+
+    .text--heading {
+        font-size: 1.4rem;
+        
+    }
+
+    .text--heading--big {
+        font-size: 4.2rem;
+    }
+
+    .text--sub-heading {
+        font-size: 1.1rem;
+    }
+
+    .text--description {
+        font-size: .9rem;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .navbar-toggler{
+        padding: .1rem;
+        /*border-radius: .15rem;*/
+        /*border: .05rem solid black;*/
+        /*overflow: hidden;*/
+        transition: all .3s ease;
+    }
+    .navbar-collapse {
+        position: absolute;
+        min-width: 18rem;
+        top: 85px;
+        right: 0;
+        height: 100vh;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        
+        background-color: white;
+        border-radius: .2rem;
+        box-shadow: 0 0 1rem .1rem #888;
+        /*transform: translateX(100%);
+        transition: all .3s linear;*/
+        display: none;
+    }
+}
+/*#343a40!important*/

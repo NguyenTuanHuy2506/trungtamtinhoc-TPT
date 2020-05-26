@@ -1,0 +1,364 @@
+$fnt-main: 'Baloo 2',
+cursive;
+$c-main: #4da6ff;
+$c-darkblue: #263b5e;
+$c-sungreen: #17b978;
+$c-white-2: rgba(white, .5);
+
+
+.text--black {
+    color: black !important;
+    transition: all .3s ease;
+}
+
+.text--black:hover {
+    color: rgba(black, .6) !important;
+}
+
+.c--dark-blue {
+    color: $c-darkblue;
+}
+
+.c--sun-green {
+    color: $c-sungreen;
+}
+
+.transformY--100 {
+    transform: translateY(-100%);
+}
+
+.transformY--0 {
+    transform: translateY(0%);
+}
+
+.top--0 {
+    top: 0 !important;
+}
+.bg--dark{
+    background-color: #343a40 !important;
+}
+.container,
+.container-fluid {
+    padding: 0 !important;
+}
+
+//-------font-family
+body {
+    font-family: $fnt-main;
+}
+
+//------hover
+.intro--sub-title:hover {
+    text-decoration: none;
+    color: rgba(white, .5) !important;
+}
+
+//-------magic-line
+.magic-line::after {
+    content: '';
+    display: block;
+    width: 0rem;
+    height: 0.2rem;
+    border-radius: 0.1rem;
+    background-color: $c-main;
+    transition: width .3s ease;
+}
+
+.magic-line:hover::after {
+    width: 100%;
+}
+
+//-----normal css
+.abs--center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.a--link {
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.a--link:hover {
+    cursor: pointer;
+    text-decoration: none !important;
+    color: $c-main !important;
+}
+
+.intro--sub {
+    padding: .2rem 0;
+    display: flex;
+
+    .intro--sub-title {
+        font-size: .9rem;
+        color: lightgray;
+        padding: 0 .4rem;
+    }
+}
+
+.main--logo {
+    font-size: 4.7rem;
+    font-weight: 700;
+}
+
+.arrow--down::after {
+    font-family: FontAwesome;
+    content: '\f107';
+}
+
+.top-menu__sub {
+    border-radius: .2rem;
+    overflow: hidden;
+
+    &--item {
+        padding-left: 1.5rem;
+        transition: all .3s ease;
+    }
+
+    &--item:hover {
+        padding-left: .5rem;
+        background-color: lightgray;
+    }
+}
+
+.flex--custom {
+    display: flex;
+    justify-content: center;
+}
+
+.flex--center {
+    align-items: center;
+}
+
+.flex--column {
+    flex-direction: column;
+}
+
+.flex--row {
+    flex-direction: row;
+}
+
+.flex--row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex--column-reverse {
+    flex-direction: column-reverse;
+}
+
+.full-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature--item::before {
+    font-family: FontAwesome;
+    content: '\f105';
+    margin: 0 .5rem;
+    font-weight: 600;
+    color: red;
+}
+
+.text--heading,
+.text--sub-heading,
+.text--description {
+    display: block;
+    margin: .3rem 0;
+}
+
+.text--heading {
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+.text--heading--big {
+    text-align: center;
+    letter-spacing: .2rem;
+    font-size: 5.2rem;
+}
+
+.text--sub-heading {
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+
+.text--description {
+    font-size: 1rem;
+}
+.nav--fixed {
+    transition: all .4s ease;
+}
+.interface--fade{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: .3s ease;
+    z-index: 1;
+}
+.fade--black{
+    background-color: rgba(black, .1);
+}
+.icon--bar{
+    width: 2rem;
+    height: .25rem;
+    margin: .2rem;
+    border-radius: .15rem;
+    background-color: black;
+    display: block;
+    transition: all .3s ease;
+}
+.rotate-45--up{
+    transform: rotate(45deg);
+}
+.rotate-45--down{
+    transform: rotate(-45deg);
+}
+.hero {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    &--container {
+        width: 100%;
+        height: 100%;
+        margin: .5rem 0;
+        position: relative;
+        display: flex;
+        transition: all .5s ease;
+
+        &--left,
+        &--right {
+            width: 50%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            transition: all .2s;
+        }
+        &--left {
+            padding: .5rem;
+            @extend .flex--custom;
+            @extend .flex--column;
+        }
+
+        &--right {
+            &__img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.sli-item {
+    display: none;
+}
+
+.sli-item.active {
+    display: flex;
+}
+.notification {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: .5rem;
+
+    &--icon,
+    &--container {
+        position: absolute;
+        margin: .2rem;
+    }
+
+    &--icon {
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+        left: 0;
+        border-radius: 50%;
+        background-color: yellow;
+        .icon--center {
+            position: absolute;
+            @extend .abs--center;
+        }
+    }
+
+    &--icon:hover {
+        cursor: pointer;
+    }
+
+    &--container {
+        min-width: 20rem;
+        min-height: 50vh;
+        bottom: 0;
+        left: 3.5rem;
+        padding: .5rem;
+        border: .01rem solid rgba(black, .5);
+        border-radius: .3rem;
+        background-color: #fff;
+        transition: all .5s linear;
+        display: none;
+    }
+
+    &--is-open {
+        display: block;
+    }
+}
+
+.notification--feedback {
+    bottom: 0;
+    color: dodgerblue;
+}
+
+.notification--message {
+    bottom: 3.5rem;
+}
+
+.notification--zalo {
+    bottom: 7rem;
+}
+
+.notification--zalo::after, .notification--message::after {
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    position: absolute;
+    border: .2rem solid red;
+    background-color: transparent;
+    z-index: -1;
+    animation: rotateLeft 1s linear 1s infinite;
+}
+
+.line--5 {
+    width: calc(100% - 80%);
+    height: .4rem;
+    margin: 1rem 0;
+    border-radius: .5rem;
+    transform: skewX(-45deg);
+    background-color: $c-sungreen;
+}
+
+.line--5::after,
+.line--5::before {
+    content: '';
+    position: absolute;
+    height: .2rem;
+    width: 1.5rem;
+    background-color: $c-sungreen;
+}
+
+.line--5::after {
+    right: 0;
+    transform: translateX(3rem);
+}
+
+.line--5::before {
+    left: 0;
+    transform: translateX(-3rem);
+}
